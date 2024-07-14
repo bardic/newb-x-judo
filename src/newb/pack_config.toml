@@ -1,8 +1,8 @@
-name = "Newb X Legacy"
-version = [0, 15, 0]
+name = "Newb X Judo"
+version = [0, 0, 21]
 min_supported_mc_version = [1, 20, 80]
 url = "https://devendrn.github.io/newb-shader/"
-authors = ["devendrn"]
+authors = ["devendrn", "judohippo"]
 materials = ["Sky", "LegacyCubemap", "Clouds", "EndSky", "SunMoon", "RenderChunk", "Actor"]
 
 [description]
@@ -16,8 +16,8 @@ long = '''
 short = "Legacy port of Newb Shader for RenderDragon"
 
 [uuid] # Use https://www.uuidgenerator.net/version4
-header = "95f774cf-4afa-73e7-a21a-72146307b1d2"
-module = "900f3d8b-37b4-465f-8f56-941687e36c35"
+header = "dccd0e41-2d80-4b38-aca6-c9d038640ddc"
+module = "25bd9855-7f55-40bc-bedb-964db790fa83"
 
 [info]
 # %a = authors
@@ -32,51 +32,10 @@ credits = '''
 # subpacks are arranged in left to right order
 # right-most subpack is enabled by default
 
-[[subpack]]
-define = "ROUNDED_CLOUDS"
-materials = ["Clouds"]
-description = '''
-Rounded Clouds
-'''
 
 [[subpack]]
-define = "BOX_CLOUDS"
-materials = ["Clouds", "RenderChunk"]
-description = '''
-Box Clouds
-'''
-
-[[subpack]]
-define = "CHUNK_ANIM"
-materials = ["RenderChunk"]
-description = '''
-Chunk loading animation
-'''
-
-[[subpack]]
-define = "NO_WAVE_NO_FOG"
-materials = ["RenderChunk"]
-description = '''
-No fog and wave effects
-'''
-
-[[subpack]]
-define = "NO_FOG"
-materials = ["RenderChunk"]
-description = '''
-No fog effect
-'''
-
-[[subpack]]
-define = "NO_WAVE"
-materials = ["RenderChunk"]
-description = '''
-No wave effects
-'''
-
-[[subpack]]
-define = "DEFAULT"
-materials = []
+define = "Default"
+materials =[]
 description = '''
 Default
 '''

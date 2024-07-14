@@ -91,7 +91,7 @@ vec3 nlLighting(
   }
 
   // darken at crevices
-  light *= COLOR.g > 0.35 ? 1.0 : 0.8;
+  light *= COLOR.g > 0.25 ? 1.0 : 0.85;
 
   // brighten tree leaves
   if (isTree) {

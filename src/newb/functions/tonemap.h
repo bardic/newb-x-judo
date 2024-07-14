@@ -49,9 +49,9 @@ vec3 colorCorrectionInv(vec3 col) {
     col /= NL_TINT;
   #endif
 
-  //#ifdef NL_SATURATION
+  // #ifdef NL_SATURATION
   //  col = mix(vec3_splat(dot(col,vec3(0.21, 0.71, 0.08))), col, NL_SATURATION);
-  //#endif
+  // #endif
 
   // incomplete
   // extended reinhard only
