@@ -1,5 +1,5 @@
 name = "Newb X Judo"
-version = [0, 0, 21]
+version = [0, 0, 20 ]
 min_supported_mc_version = [1, 20, 80]
 url = "https://devendrn.github.io/newb-shader/"
 authors = ["devendrn", "judohippo"]
@@ -27,15 +27,4 @@ Copyright (c) %a
 **Important Note:** Redistribution of this resource pack with links other than the official ones provided by the creator is strictly prohibited.
 '''
 credits = '''
-'''
-
-# subpacks are arranged in left to right order
-# right-most subpack is enabled by default
-
-
-[[subpack]]
-define = "Default"
-materials =[]
-description = '''
-Default
 '''
