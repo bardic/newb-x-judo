@@ -33,15 +33,15 @@
 #define NL_TONEMAP_TYPE 4 // 1:Exponential, 2:Reinhard, 3:Extended Reinhard, 4:ACES
 #define NL_CONSTRAST 1.25 // 0.3 low ~ 2.0 high
 #define NL_EXPOSURE 1.25  // [toggle] 0.5 dark ~ 3.0 bright
-#define NL_SATURATION 3.0 // [toggle] 0.0 grayscale ~ 4.0 super saturated
+// #define NL_SATURATION 3.0 // [toggle] 0.0 grayscale ~ 4.0 super saturated
 // #define NL_TINT vec3(1.0,0.75,0.5) // [toggle] color overlay
 
 /* Terrain lighting */
 #define NL_SUN_INTENSITY 2.75    // 0.5 weak ~ 5.0 bright
 #define NL_TORCH_INTENSITY 2.25  // 0.5 weak ~ 3.0 bright
-#define NL_NIGHT_BRIGHTNESS 0.75 // 0.0 dark ~ 2.0 bright
-#define NL_CAVE_BRIGHTNESS 0.6   // 0.0 dark ~ 2.0 bright
-#define NL_SHADOW_INTENSITY 0.75 // 0.0 no shadow ~ 1.0 strong shadow
+#define NL_NIGHT_BRIGHTNESS 0.55 // 0.0 dark ~ 2.0 bright
+#define NL_CAVE_BRIGHTNESS 0.30  // 0.0 dark ~ 2.0 bright
+#define NL_SHADOW_INTENSITY 0.50 // 0.0 no shadow ~ 1.0 strong shadow
 #define NL_BLINKING_TORCH        // [toggle] flickering light
 // #define NL_CLOUD_SHADOW       // [toggle] cloud shadow (simple clouds only)
 
@@ -85,7 +85,7 @@
 
 /* Ore glow intensity */
 #define NL_GLOW_TEX 2.2 // 0.4 weak ~ 8.0 bright
-#define NL_GLOW_SHIMMER // [toggle] shimmer effect
+// #define NL_GLOW_SHIMMER // [toggle] shimmer effect
 // #define NL_GLOW_LEAK 0.6 // [toggle] 0.08 subtle ~ 1.0 100% brightness of NL_GLOW_TEX
 
 /* Waving */
@@ -111,7 +111,7 @@
 #define NL_UNDERWATER_TINT vec3(123 / 255, 228 / 255, 222 / 255) // 85ceb4 // fog tint color when underwater
 
 /* Cloud type */
-#define NL_CLOUD_TYPE 2 // 0:vanilla, 1:soft, 2:rounded
+#define NL_CLOUD_TYPE 1 // 0:vanilla, 1:soft, 2:rounded
 
 /* Vanilla cloud settings - make sure to remove clouds.png when using this */
 #define NL_CLOUD0_THICKNESS 2.1      // 0.5 slim ~ 8.0 fat
@@ -119,11 +119,11 @@
 #define NL_CLOUD0_OPACITY 0.75       // 0.0 invisible ~ 1.0 opaque
 
 /* Soft cloud settings */
-#define NL_CLOUD1_SCALE vec2(0.003, 0.01) // 0.003 large ~ 0.2 tiny
-#define NL_CLOUD1_DEPTH 7.5               // 0.0 no bump ~ 10.0 large bumps
-#define NL_CLOUD1_SPEED 0.25              // 0.0 static ~ 0.4 fast moving
-#define NL_CLOUD1_DENSITY 0.4             // 0.1 less clouds ~ 0.8 more clouds
-#define NL_CLOUD1_OPACITY 0.75            // 0.0 invisible ~ 1.0 opaque
+#define NL_CLOUD1_SCALE vec2(0.003, 0.002) // 0.003 large ~ 0.2 tiny
+#define NL_CLOUD1_DEPTH 10                 // 0.0 no bump ~ 10.0 large bumps
+#define NL_CLOUD1_SPEED 0.4                // 0.0 static ~ 0.4 fast moving
+#define NL_CLOUD1_DENSITY 0.8              // 0.1 less clouds ~ 0.8 more clouds
+#define NL_CLOUD1_OPACITY 0.75             // 0.0 invisible ~ 1.0 opaque
 
 /* Rounded cloud Settings */
 #define NL_CLOUD2_THICKNESS 4      // 0.5 slim ~ 5.0 fat
@@ -151,7 +151,7 @@
 #define NL_SUNMOON_SIZE 1.75  // 0.3 tiny ~ 4.0 massive
 
 /* Fake godrays during sunrise/sunset */
-#define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
+#define NL_GODRAY 2.0 // [toggle] 0.1 subtle ~ 0.8 strong
 
 /* Sky reflection */
 #define NL_GROUND_REFL 0.2         // [toggle] 0.2 slightly reflective ~ 1.0 fully reflect sky
@@ -167,3 +167,46 @@
 #define JD_CONST_ACES_E 0.14
 
 #endif
+
+/*
+  EDITING CONFIG FOR SUBPACKS:
+
+  If a value is already defined,
+  then you must undefine it before modifying:
+  eg: #undef OPTION_NAME
+
+  subpack names and flags are inside pack_config.sh.
+  pack.sh will enable corresponding flags when compiling.
+*/
+
+/* ------ SUBPACK CONFIG STARTS HERE -------- */
+
+#ifdef JD_LITE
+#define NO_WAVE
+#define NO_FOG
+#undef NL_BLINKING_TORCH
+#undef NL_RAINBOW
+#undef NL_GROUND_REFL
+#undef NL_CLOUD2_MULTILAYER
+#undef NL_GODRAY
+#undef NL_AURORA
+#undef NL_GROUND_AURORA_REFL
+#endif
+
+#ifdef NO_FOG
+#undef NL_FOG_TYPE
+#define NL_FOG_TYPE 0
+#undef NL_WATER_FOG_FADE
+#endif
+
+#ifdef NO_WAVE
+#undef NL_PLANTS_WAVE
+#undef NL_LANTERN_WAVE
+#undef NL_UNDERWATER_WAVE
+#undef NL_UNDERWATER_STREAKS
+#undef NL_WATER_WAVE
+#undef NL_RAIN_MIST_OPACITY // [toggle] wave effect
+#undef NL_WATER_CLOUD_REFLECTION
+#endif
+
+/* ------ SUBPACK CONFIG ENDS HERE -------- */

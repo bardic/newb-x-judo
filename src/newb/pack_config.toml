@@ -1,5 +1,5 @@
 name = "Newb X Judo"
-version = [0, 0, 20 ]
+version = [0, 0, 1 ]
 min_supported_mc_version = [1, 20, 80]
 url = "https://devendrn.github.io/newb-shader/"
 authors = ["devendrn", "judohippo"]
@@ -27,4 +27,57 @@ Copyright (c) %a
 **Important Note:** Redistribution of this resource pack with links other than the official ones provided by the creator is strictly prohibited.
 '''
 credits = '''
+'''
+
+# subpacks are arranged in left to right order
+# right-most subpack is enabled by default
+
+
+[[subpack]]
+define = "JD_LITE"
+materials = ["Sky", "LegacyCubemap", "Clouds", "EndSky", "SunMoon", "RenderChunk", "Actor"]
+description = '''
+Lite Mode
+'''
+
+[[subpack]]
+define = "JD_EMISSIVE"
+materials = []
+description = '''
+Default w/ emissive ores    
+'''
+
+[[subpack]]
+define = "JD_BORDER_EMISSIVE"
+materials = []
+description = '''
+Default w/ bordered emissive ores    
+'''
+
+[[subpack]]
+define = "JD_BORDER_PBR"
+materials = []
+description = '''
+Default w/ bordered ores    
+'''
+
+[[subpack]]
+define = "JD_BORDER"
+materials = []
+description = '''
+Default w/ bordered ores    
+'''
+
+[[subpack]]
+define = "JD_PBR"
+materials = []
+description = '''
+Default with PBR ores
+'''
+
+[[subpack]]
+define = "DEFAULT"
+materials = []
+description = '''
+Default
 '''
