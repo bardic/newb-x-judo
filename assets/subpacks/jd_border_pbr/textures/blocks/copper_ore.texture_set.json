@@ -1,0 +1,7 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "copper_ore",
+    "heightmap": "copper_ore_height"
+  }
+}

@@ -16,7 +16,7 @@ void main() {
     color = renderClouds(vDir, v_color0.xyz, v_color1.a, v_color2.a, v_color2.rgb, v_color1.rgb);
 
     #ifdef NL_CLOUD2_MULTILAYER
-      vec2 parallax = vDir.xz / abs(vDir.y) * 143.0;
+      vec2 parallax = vDir.xz / abs(vDir.y) * 250.0;
       vec3 offsetPos = v_color0.xyz;
       offsetPos.xz += parallax;
       vec4 color2 = renderClouds(vDir, offsetPos, v_color1.a, v_color2.a*2.0, v_color2.rgb, v_color1.rgb);

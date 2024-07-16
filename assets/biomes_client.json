@@ -1,13 +1,13 @@
 {
   "biomes": {
     "default": {
-      "water_surface_transparency": 0.65
+      "water_surface_transparency": 0.88
     },
     "swampland": {
-      "water_surface_transparency": 0.94
+      "water_surface_transparency": 0.9
     },
     "swampland_mutated": {
-      "water_surface_transparency": 0.94
+      "water_surface_transparency": 0.92
     },
     "the_end": {
       "fog_identifier": "newb:fog_the_end"
